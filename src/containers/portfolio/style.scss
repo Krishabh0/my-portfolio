@@ -1,0 +1,123 @@
+.portfolio {
+  padding: 80px 20px;
+  background-color: var(--yellow-theme-nav-background-color);
+  
+  .portfolio-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 0;
+  }
+  
+  .portfolio-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+  }
+  
+  .portfolio-card {
+    background:var(--yellow-theme-main-color);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      cursor: pointer;
+    }
+    
+    .card-image {
+      height: 200px;
+      background: var(--yellow-theme-main-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      
+      .image-placeholder {
+        color: #888;
+        font-size: 1.2rem;
+      }
+    }
+    
+    .card-content {
+      padding: 25px;
+      
+      h3 {
+        margin: 0 0 10px;
+        color: #333;
+        font-size: 1.3rem;
+      }
+      
+      p {
+        color: #666;
+        line-height: 1.6;
+        margin-bottom: 15px;
+      }
+    }
+    
+    .technologies {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 20px;
+      
+      .tech-tag {
+        background:var(  --yellow-theme-background-color);
+        padding: 5px 12px;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        color:var(--yellow-theme-main-color);
+      }
+    }
+    
+    .card-actions {
+      display: flex;
+      gap: 15px;
+      
+      a {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        padding: 8px 15px;
+        border-radius: 5px;
+        font-size: 0.9rem;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        
+        &.github-link {
+          background: black;
+          color: var(  --yellow-theme-main-color);
+          
+          &:hover {
+            background: #4e3636;
+          }
+        }
+        
+        &.demo-link {
+          background: #4e54c8;
+          color: white;
+          
+          &:hover {
+            background: #3a3f9c;
+          }
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 768px) {
+    padding: 60px 15px;
+    
+    .portfolio-cards {
+      grid-template-columns: 1fr;
+    }
+  }
+}

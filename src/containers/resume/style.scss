@@ -1,0 +1,127 @@
+.resume {
+  position: relative;
+  min-height: 100vh;
+  padding: 120px 20px 80px; // Added top padding for navbar
+  background-color: var(--yellow-theme-background-color);
+  text-align: center;
+  
+  &__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 0;
+  }
+
+  &__card {
+    background: var(--yellow-theme-background-color);
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    padding: 40px;
+    max-width: 500px;
+    width: 100%;
+    transition: all 0.3s ease;
+    border: 1px solid var(--yellow-theme-main-color);
+    
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+    }
+    
+    &-icon {
+      color: var(--yellow-theme-main-color);
+      margin-bottom: 20px;
+    }
+    
+    h3 {
+      margin: 0 0 15px;
+      color: var(--yellow-theme-sub-text-color);
+      font-size: 1.8rem;
+      font-weight: 500;
+    }
+    
+    p {
+      color: var(--yellow-theme-sub-text-color);
+      line-height: 1.6;
+      margin-bottom: 30px;
+      font-size: 1.1rem;
+    }
+    
+    &-actions {
+      margin: 25px 0;
+    }
+  }
+
+  &__download-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 30px;
+    background: var(--yellow-theme-main-color);
+    color: #000;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+    
+    &:hover {
+      background: transparent;
+      color: var(--yellow-theme-main-color);
+      border-color: var(--yellow-theme-main-color);
+      transform: translateY(-2px);
+    }
+  }
+
+  &__card-footer {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid var(--yellow-theme-main-color);
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: var(--yellow-theme-sub-text-color);
+  }
+
+  @media only screen and (max-width: 768px) {
+    padding: 100px 15px 60px;
+    
+    &__card {
+      padding: 30px 20px;
+      
+      h3 {
+        font-size: 1.5rem;
+      }
+    }
+
+    &__card-footer {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+
+  @media only screen and (max-width: 480px) {
+    padding: 80px 10px 40px;
+    
+    &__card {
+      padding: 25px 15px;
+      
+      h3 {
+        font-size: 1.3rem;
+      }
+      
+      p {
+        font-size: 1rem;
+      }
+    }
+
+    &__download-button {
+      padding: 10px 20px;
+      font-size: 1rem;
+    }
+  }
+}
